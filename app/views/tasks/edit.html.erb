@@ -1,0 +1,12 @@
+<h1>Edit a Punishing Task</h1>
+
+
+<%= form_for @task do |task_form| %>
+  Title: <%= task_form.text_field :title %>
+  Details: <%= task_form.text_field :details %>
+  Completed: <%= task_form.check_box :completed %>
+  <%= task_form.button %>
+<% end %>
+
+<br>
+<p><%= link_to "< Back", tasks_path %></p>

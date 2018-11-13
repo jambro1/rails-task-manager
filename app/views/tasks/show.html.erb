@@ -1,0 +1,16 @@
+
+<%if @task.completed == false%>
+  <% r = "❎" %>
+  <% else %>
+  <% r = "✅" %>
+  <% end %>
+
+
+<h1><%= r %> - <%= @task.title %></h1>
+<p><%= @task.details %></p>
+
+<p><%= link_to "Edit this listing", edit_path(@task)%></p>
+
+
+<br>
+<p><%= link_to "< Back", tasks_path %></p>
